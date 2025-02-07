@@ -13,33 +13,33 @@ Installation & Setup
 No additional packages are required for this project. The only prerequisite is having Django installed. Follow the steps below to set up and run the project:
 
 Django Requires Python
-```
+```bash
 python --version
 ```
 
 If Python is installed, you will get a result with the version number, like this
-```
+```bash
 Python 3.9.2
 ```
 
 To install Django, you must use a package manager like PIP
 To check if your system has PIP installed, run this command in the command prompt:
-```
+```bash
 pip --version
 ```
 Install packages in a virtual environment using pip and venv
-```
+```bash
 pip install virtualenv
 ```
 Type the following in the command prompt, remember to navigate to where you want to create your project
-```
+```bash
 py -m venv venv
 ```
 
 Then you have to activate the environment, by typing this command:
 
-```
-myworld\Scripts\activate.bat
+```bash
+venv\Scripts\activate.bat
 
 ```
 
@@ -50,7 +50,7 @@ py -m pip install Django
 ```
 
 Check Django Version
-```
+```bash
 django-admin --version
 ```
 
@@ -66,10 +66,16 @@ Navigate to the ContentManagerDjango folder
 ```
 cd ContentManagerDjango
 ```
+Migrate
+Now when we have described a Model in the models.py file, we must run a command to actually create the table in the database.
 Run database migrations:
+```bash
+py manage.py makemigrations
+```
+
+Run database migrate:
 
 ```bash
-
 python manage.py migrate
 ```
 Create a superuser (for accessing the admin panel):
@@ -92,9 +98,5 @@ Admin Panel: http://127.0.0.1:8000/admin/
 Blog Listing: http://127.0.0.1:8000/
 ```
 Now the project is fully set up and ready to use! 🚀
-
-
-```python
-print("Hello, world!")
 
 
