@@ -18,6 +18,18 @@ Blog Listing Page: A page where all published blog posts are displayed.
 Blog Detail Page: A dedicated page for viewing the full content of each blog post, including embedded files and media.
 This project leverages Django’s powerful features to ensure seamless content management and an intuitive user experience.
 ***
+![GitHub screen]([https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png](https://github.com/hameddalvand67/ContentManagerDjango/blob/main/ContentManager/screens/Screenshot%202025-02-07%20145806.png))
+
+![GitHub screen]([https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png](https://github.com/hameddalvand67/ContentManagerDjango/blob/main/ContentManager/screens/Screenshot%202025-02-07%20145806.png))
+
+![GitHub screen]([https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png](https://github.com/hameddalvand67/ContentManagerDjango/blob/main/ContentManager/screens/Screenshot%202025-02-07%20145806.png))
+
+![GitHub screen]([https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png](https://github.com/hameddalvand67/ContentManagerDjango/blob/main/ContentManager/screens/Screenshot%202025-02-07%20145806.png))
+
+![GitHub screen]([https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png](https://github.com/hameddalvand67/ContentManagerDjango/blob/main/ContentManager/screens/Screenshot%202025-02-07%20145806.png))
+
+
+***
 **Installation & Setup**
 
 No additional packages are required for this project. The only prerequisite is having Django installed. Follow the steps below to set up and run the project.
