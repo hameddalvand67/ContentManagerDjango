@@ -52,5 +52,7 @@ Blog Listing: http://127.0.0.1:8000/
 Now the project is fully set up and ready to use! 🚀
 
 
+```python
 print("Hello, world!")
+
 
