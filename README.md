@@ -14,41 +14,43 @@ No additional packages are required for this project. The only prerequisite is h
 
 Install Django (if not already installed):
 
-bash
-Copy
-Edit
+```bash
 pip install django
-Clone the repository:
+```
 
-bash
-Copy
-Edit
+
+**Clone the repository:**
+
+```bash
 git clone [https://github.com/hameddalvand67/ContentManagerDjango.git]
 cd ContentManagerDjango
+```
+
 Run database migrations:
 
-bash
-Copy
-Edit
+```bash
+
 python manage.py migrate
+```
 Create a superuser (for accessing the admin panel):
 
-bash
-Copy
-Edit
+```bash
+
 python manage.py createsuperuser
+
+```
 Follow the prompts to set up a username and password.
 
 Start the Django development server:
 
-bash
-Copy
-Edit
+```bash
 python manage.py runserver
+```
 Access the application:
-
+```
 Admin Panel: http://127.0.0.1:8000/admin/
 Blog Listing: http://127.0.0.1:8000/
+```
 Now the project is fully set up and ready to use! 🚀
 
 
