@@ -1,8 +1,9 @@
 venv/
-ContentManagerDjango/ContentManager/media
-ContentManagerDjango/ContentManager/static
-ContentManagerDjango/ContentManager/staticfiles
-ContentManagerDjango/ContentManager/db.sqlite3
+media/
+static/
+staticfiles/
+db.sqlite3
+migrations/
 
 
 
