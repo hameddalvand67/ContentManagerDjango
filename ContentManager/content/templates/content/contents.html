@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Content Display</title>
+
 
     <!-- Bootstrap CSS -->
         <link href="{% static 'content/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -21,6 +23,7 @@
 <body class="container mt-4">
 
     <h3 class="text-center">Content Display</h3>
+    <a href="/" >back</a>
 
     <!-- Table with File URLs -->
     <div class="mb-3">
@@ -33,11 +36,19 @@
             </thead>
             <tbody>
                 {% for content in contents %}
-                {% if content.file %}
+                {% if content %}
                 <tr>
                     <td>{{ content.id }}</td>
                     <td>
-                        <a href="#content-{{ content.id }}" class="file-link">{{ content.file.url }}</a>
+                        <a href="#content-{{ content.id }}" class="file-link">
+                                            {% if content.file %}
+                            {{ content.file.url }}
+                                            {% else %}
+    {{ content.content|slice:":10" }}
+
+                                            {% endif %}
+
+                        </a>
                     </td>
                 </tr>
                 {% endif %}
@@ -108,7 +119,22 @@
         </div>
         {% endwith %}
         {% endwith %}
+
+        {% else %}
+            <div class="col-md-12 mb-1" id="content-{{ content.id }}">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Content {{ forloop.counter }} (ID: {{ content.id }})</h5>
+
+                    <div class="text mb-4">
+                        {{ content.content }}
+                    </div>
+                </div>
+                </div>
+                </div>
+
         {% endif %}
+
         {% empty %}
         <p class="text-center">No content available.</p>
         {% endfor %}

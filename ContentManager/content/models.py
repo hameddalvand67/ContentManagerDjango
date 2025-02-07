@@ -152,7 +152,7 @@ def validate_file_size(value):
 
 class Content(models.Model):
     content = models.TextField(null=True, blank=True, default=None)
-    blog = models.ForeignKey(Blog, related_name='blog_contents', on_delete=models.CASCADE)
+    blog = models.ForeignKey(Blog, related_name='blog_contents', on_delete=models.CASCADE,null=True, blank=True, default=None)
     sort_index = models.IntegerField(default=0, null=True, blank=True)
     file = models.FileField(upload_to=get_upload_to, validators=[validate_file_size, validate_file_extension],
                             null=True, blank=True, default=None)
