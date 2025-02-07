@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Display</title>
+
+    <!-- Bootstrap CSS -->
+        <link href="{% static 'content/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <style>
+        /* Set max height for image and video */
+        img, video {
+            max-height: 750px;  /* Set maximum height */
+            width: 100%;  /* Make sure they are responsive */
+            object-fit: contain;  /* Make sure the aspect ratio is preserved */
+        }
+    </style>
+</head>
+<body class="container mt-4">
+
+    <h3 class="text-center">Content Display</h3>
+
+    <!-- Table with File URLs -->
+    <div class="mb-3">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>File URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for content in contents %}
+                {% if content.file %}
+                <tr>
+                    <td>{{ content.id }}</td>
+                    <td>
+                        <a href="#content-{{ content.id }}" class="file-link">{{ content.file.url }}</a>
+                    </td>
+                </tr>
+                {% endif %}
+                {% empty %}
+                <tr>
+                    <td colspan="2" class="text-center">No content available.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        {% for content in contents %}
+        {% if content.file %}
+        {% with content.file.url as file_url %}
+        {% with content.file.name|lower as file_name %}
+        <div class="col-md-12 mb-1" id="content-{{ content.id }}">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Content {{ forloop.counter }} (ID: {{ content.id }})</h5>
+
+                    <div class="text mb-4">
+                        {{ content.content }}
+                    </div>
+                    <!-- PDF Display -->
+                    {% if file_name|slice:"-4:" == ".pdf" %}
+                    <embed src="{{ file_url }}" type="application/pdf" width="100%" height="500px" />
+
+                    <!-- Image Display -->
+                    {% elif file_name|slice:"-4:" in ".jpg,.jpeg,.png,.webp" %}
+                    <img src="{{ file_url }}" class="img-fluid" alt="Image">
+
+                    <!-- Audio Display -->
+                    {% elif file_name|slice:"-4:" in ".mp3,.wav,.ogg,.aac,.flac,.m4a" %}
+                    <audio controls>
+                        <source src="{{ file_url }}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <!-- Video Display -->
+                    {% elif file_name|slice:"-4:" in ".mp4,.mov,.avi,.mkv,.flv,.wmv,.webm" %}
+                    <video controls width="100%">
+                        <source src="{{ file_url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <!-- Programming Files (e.g., Python, Java, C++) -->
+                    {% elif file_name|slice:"-3:" in ".py,.c,.cpp,.cs,.rb,.go,.js,.ts,.r,.php,.lua,.sh,.pl,.tcl,.ml,.clj,.ex,.exs,.kt,.kts,.rs,.jsx,.tsx" %}
+                    <pre><code>{{ content.file_content }}</code></pre> <!-- Display file content -->
+
+                    {% elif file_name|slice:"-4:" in ".java,.dart,.swift,.perl,.lisp,.m4a,.scala" %}
+                    <pre><code>{{ content.file_content }}</code></pre> <!-- Display file content -->
+
+                    <!-- 3D Model Files (Blender, 3ds Max) -->
+                    {% elif file_name|slice:"-5:" in ".blend,.max" %}
+                    <p>3D Model: <a href="{{ file_url }}" target="_blank">Download Model</a></p>
+
+                    <!-- Markup & Data Files -->
+                    {% elif file_name|slice:"-4:" in ".html,.xml,.json,.csv,.yaml,.yml" %}
+                    <pre><code>{{ content.file_content }}</code></pre> <!-- Display content of markup/data files -->
+
+                    {% else %}
+                    <a href="{{ file_url }}">{{ file_url }}</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endwith %}
+        {% endwith %}
+        {% endif %}
+        {% empty %}
+        <p class="text-center">No content available.</p>
+        {% endfor %}
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="{% static 'content/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- jQuery to handle scroll to content on URL click -->
+    <script>
+        $(document).ready(function() {
+            // When a file link is clicked, scroll to the respective content section
+            $(".file-link").click(function(e) {
+                e.preventDefault();  // Prevent the default link behavior
+                var target = $(this).attr("href");  // Get the target content ID
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top  // Scroll to the target section
+                }, 500);
+            });
+        });
+    </script>
+
+</body>
+</html>
