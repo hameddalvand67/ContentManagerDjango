@@ -1,17 +1,17 @@
 @echo off
 echo Changing directory to Django project...
 
-:: تغییر مسیر به پوشه پروژه (مسیر را مطابق با پروژه خود تنظیم کنید)
+:: Change directory to the project folder (update the path according to your project)
 cd /d "E:\projects\git_projects\ContentManagerDjango"
 
 echo Activating virtual environment...
 
-:: فعال کردن محیط مجازی (اگر از محیط مجازی استفاده می‌کنید)
+:: Activate the virtual environment (if using a virtual environment)
 call venv\Scripts\activate
 
 echo Starting Django server...
 
-:: اجرای سرور Django
+:: Run the Django server
 cd ContentManager
 python ./manage.py runserver
 
