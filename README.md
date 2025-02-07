@@ -18,10 +18,8 @@ Blog Listing Page: A page where all published blog posts are displayed.
 Blog Detail Page: A dedicated page for viewing the full content of each blog post, including embedded files and media.
 This project leverages Django’s powerful features to ensure seamless content management and an intuitive user experience.
 ***
-![GitHub screen]
-(https://github.com/hameddalvand67/ContentManagerDjango/blob/main/ContentManager/screens/Screenshot%202025-02-07%20145806.png)
 
-![GitHub screen](https://raw.githubusercontent.com/hameddalvand67/ContentManagerDjango/main/ContentManager/screens/Screenshot%202025-02-07%20145806.png)
+![GitHub screen](https://github.com/hameddalvand67/ContentManagerDjango/blob/main/ContentManager/screens/Screenshot%202025-02-07%20145842.png)
 
 
 ![GitHub screen](https://github.com/hameddalvand67/ContentManagerDjango/blob/main/ContentManager/screens/Screenshot%202025-02-07%20145806.png)
