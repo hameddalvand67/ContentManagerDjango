@@ -12,11 +12,49 @@ This project leverages Django’s powerful features to ensure seamless content m
 Installation & Setup
 No additional packages are required for this project. The only prerequisite is having Django installed. Follow the steps below to set up and run the project:
 
+Django Requires Python
+```
+python --version
+```
+
+If Python is installed, you will get a result with the version number, like this
+```
+Python 3.9.2
+```
+
+To install Django, you must use a package manager like PIP
+To check if your system has PIP installed, run this command in the command prompt:
+```
+pip --version
+```
+Install packages in a virtual environment using pip and venv
+```
+pip install virtualenv
+```
+Type the following in the command prompt, remember to navigate to where you want to create your project
+```
+py -m venv venv
+```
+
+Then you have to activate the environment, by typing this command:
+
+```
+myworld\Scripts\activate.bat
+
+```
+
 Install Django (if not already installed):
 
 ```bash
-pip install django
+py -m pip install Django
 ```
+
+Check Django Version
+```
+django-admin --version
+```
+
+
 
 
 **Clone the repository:**
