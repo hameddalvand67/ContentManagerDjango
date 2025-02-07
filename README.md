@@ -1,11 +1,11 @@
 
 
 **ContentManagerDjango**
-
+---
 
 ContentManagerDjango is a Django-based content management system designed as a simple yet efficient blog platform. This project enables users to create and manage blog posts while supporting various content formats, including programming files, images, audio, and video.
 ---
-**Project Structure**
+***Project Structure***
 
 🔹 Admin Panel
 Built using Django's admin interface, this section serves as the backend for managing blog entries and uploading associated files.
