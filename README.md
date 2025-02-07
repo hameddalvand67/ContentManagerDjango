@@ -61,9 +61,11 @@ django-admin --version
 
 ```bash
 git clone [https://github.com/hameddalvand67/ContentManagerDjango.git]
+```
+Navigate to the ContentManagerDjango folder 
+```
 cd ContentManagerDjango
 ```
-
 Run database migrations:
 
 ```bash
