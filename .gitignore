@@ -1,1 +1,6 @@
+venv/
+ContentManagerDjango/ContentManager/media
+ContentManagerDjango/ContentManager/static
+ContentManagerDjango/ContentManager/staticfiles
+ContentManagerDjango/ContentManager/db.sqlite3
 
