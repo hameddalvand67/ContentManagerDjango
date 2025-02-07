@@ -26,9 +26,11 @@ This project leverages Django’s powerful features to ensure seamless content m
 
 ![GitHub screen](https://github.com/hameddalvand67/ContentManagerDjango/blob/main/ContentManager/screens/Screenshot%202025-02-07%20145910.png)
 
+![GitHub screen](https://github.com/hameddalvand67/ContentManagerDjango/blob/main/ContentManager/screens/Screenshot%202025-02-07%20160755.png)
+
 ![GitHub screen](https://github.com/hameddalvand67/ContentManagerDjango/blob/main/ContentManager/screens/Screenshot%202025-02-07%20160721.png)
 
-![GitHub screen](https://github.com/hameddalvand67/ContentManagerDjango/blob/main/ContentManager/screens/Screenshot%202025-02-07%20160755.png)
+
 
 
 ***
