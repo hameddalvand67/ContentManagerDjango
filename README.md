@@ -23,7 +23,7 @@ Clone the repository:
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/ContentManagerDjango.git
+git clone [https://github.com/hameddalvand67/ContentManagerDjango.git]
 cd ContentManagerDjango
 Run database migrations:
 
